@@ -5,7 +5,7 @@ import xbmcgui
 import json
 
 def convert_time(runtime):
-    return '{0} days {1} hours {2} minutes'.format(runtime/24/60, runtime/60%24, runtime%60)
+    return '{0} days {1} hours {2} minutes'.format(int(runtime/24/60), int(runtime/60%24), f'{runtime%60:.2f}')
 
 def display_details(addon, show_title, message):
     addon_name = addon.getAddonInfo('name')
@@ -37,9 +37,15 @@ if __name__ == '__main__':
                 remaining_runtime += episode['runtime'] / 60
             total_runtime += episode['runtime'] / 60
         
+        xbmc.log('Context Showruntime remaining runtime: ' + str(show_title) + ' ' + str(remaining_runtime), xbmc.LOGDEBUG)
+        xbmc.log('Context Showruntime total runtime: ' + str(show_title) + ' ' + str(total_runtime), xbmc.LOGDEBUG)
+
         remaining_runtime = convert_time(remaining_runtime)
         total_runtime = convert_time(total_runtime)
-        
+
+        xbmc.log('Context Showruntime remaining runtime converted: ' + str(show_title) + ' ' + str(remaining_runtime), xbmc.LOGDEBUG)
+        xbmc.log('Context Showruntime total runtime converted: ' + str(show_title) + ' ' + str(total_runtime), xbmc.LOGDEBUG)
+       
         if addon.getSetting('detailed_info') == 'true':
             percent = '{0}%'.format(str(round((float(watched_episodes)/total_episodes) * 100))[:-2])
             message = 'Watched/Unwatched: {0}/{1} ({2})'.format(watched_episodes, total_episodes, percent)
