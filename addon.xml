@@ -15,7 +15,7 @@
             <fanart>resources/fanart.jpg</fanart>
         </assets>
         <summary lang="en_GB">Display runtime for television shows</summary>
-        <description lang="en_GB">Display remaining/total runtime for television shows</description>
+        <description lang="en_GB">Display remaining/total runtime for television shows </description>
         <platform>all</platform>
     </extension>
 </addon>
