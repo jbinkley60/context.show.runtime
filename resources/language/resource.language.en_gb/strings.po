@@ -17,6 +17,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "#30000"
-msgid "Detailed runtime dialog info"
+msgid "Detailed Runtime Dialog Info"
+msgstr ""
+
+msgctxt "#30001"
+msgid "General"
 msgstr ""
 
