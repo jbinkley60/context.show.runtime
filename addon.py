@@ -54,3 +54,4 @@ if __name__ == '__main__':
             display_details(addon, show_title, message)
         else:
             xbmc.executebuiltin("Notification(Remaining runtime - {0}, {1})".format(show_title, remaining_runtime))
+            
