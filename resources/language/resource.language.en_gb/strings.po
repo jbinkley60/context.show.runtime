@@ -24,3 +24,6 @@ msgctxt "#30001"
 msgid "General"
 msgstr ""
 
+msgctxt "#30002"
+msgid "Disable Day Calculation"
+msgstr ""

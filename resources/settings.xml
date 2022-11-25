@@ -11,6 +11,14 @@
 					</constraints>
 					<control type="toggle"/>
 				</setting>
+				<setting id="day_display" type="boolean" label="30002" help="">
+					<level>0</level>
+					<default>false</default>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="toggle"/>
+				</setting>
 			</group>
 		</category>
 	</section>

@@ -5,7 +5,11 @@ import xbmcgui
 import json
 
 def convert_time(runtime):
-    return '{0} days {1} hours {2} minutes'.format(int(runtime/24/60), int(runtime/60%24), f'{runtime%60:.2f}')
+    addon = xbmcaddon.Addon()
+    if addon.getSetting('day_display') == 'false':
+        return '{0} days {1} hours {2} minutes'.format(int(runtime/24/60), int(runtime/60%24), f'{runtime%60:.2f}')
+    else:
+        return '{0} hours {1} minutes'.format(int(runtime/60), f'{runtime%60:.2f}')
 
 def display_details(addon, show_title, message):
     addon_name = addon.getAddonInfo('name')
