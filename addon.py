@@ -54,6 +54,7 @@ if __name__ == '__main__':
             percent = '{0}%'.format(str(round((float(watched_episodes)/total_episodes) * 100))[:-2])
             message = 'Watched/Unwatched: {0}/{1} ({2})'.format(watched_episodes, total_episodes, percent)
             message = '{0}\nRemaining runtime: {1}'.format(message, remaining_runtime)
+            message = '{0}\nFinish runtime: {1}'.format(message, finish_runtime)[:-7]
             message = '{0}\nTotal runtime: {1}'.format(message, total_runtime)
             display_details(addon, show_title, message)
         else:

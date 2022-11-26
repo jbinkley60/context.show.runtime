@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.show.runtime" name="Show Runtime" version="1.0.99e" provider-name="jbinkley60">
+<addon id="context.show.runtime" name="Show Runtime" version="1.0.99f" provider-name="jbinkley60">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
     <extension point="kodi.context.item" library="addon.py">
         <item>
             <label>Show Runtime</label>
-            <visible>String.IsEqual(ListItem.dbtype, tvshow)</visible>
+            <visible>[String.IsEqual(Container.Content,seasons) | String.IsEqual(Container.Content,tvshows)]</visible>
         </item>
     </extension>
     <extension point="xbmc.addon.metadata">
